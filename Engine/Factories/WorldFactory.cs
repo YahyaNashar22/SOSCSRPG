@@ -13,9 +13,13 @@ namespace Engine.Factories
         {
             World newWorld = new();
 
-            newWorld.AddLocation(new Location(-2, -1, "Farmer's Field", "There are rows of corn growing here, with gian rats hiding between them", "Engine;component/Images/Locations/FarmField.png"));
+            newWorld.AddLocation(new Location(-2, -1, "Farmer's Field",
+                "There are rows of corn growing here, with giant rats hiding between them.",
+                "/Engine;component/Images/Locations/FarmFields.png"));
 
-            newWorld.AddLocation(new Location(-2, -1, "Farmer's House", "There are rows of corn growing here, with gian rats hiding between them", "Engine;component/Images/Locations/Farmhouse.png"));
+            newWorld.AddLocation(new Location(-1, -1, "Farmer's House",
+                "This is the house of your neighbor, Farmer Ted.",
+                "/Engine;component/Images/Locations/Farmhouse.png"));
 
             newWorld.AddLocation(new Location(0, -1, "Home", "This is your house", "/Engine;component/Images/Locations/Home.png"));
 
