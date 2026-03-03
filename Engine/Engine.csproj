@@ -13,6 +13,7 @@
     <None Remove="Images\Locations\HerbalistsGarden.png" />
     <None Remove="Images\Locations\HerbalistsHut.png" />
     <None Remove="Images\Locations\Home.png" />
+    <None Remove="Images\Locations\SOSCSRPGMap.png" />
     <None Remove="Images\Locations\SpiderForest.png" />
     <None Remove="Images\Locations\TownGate.png" />
     <None Remove="Images\Locations\TownSquare.png" />
@@ -33,6 +34,9 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Locations\Home.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Locations\SOSCSRPGMap.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Locations\SpiderForest.png">
