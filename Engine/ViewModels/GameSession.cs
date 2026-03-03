@@ -35,8 +35,7 @@ namespace Engine.ViewModels
         {
              CurrentPlayer = new("Yahya", "Fighter");
 
-            WorldFactory factory = new();
-             CurrentWorld = factory.CreateWorld();
+             CurrentWorld = WorldFactory.CreateWorld();
 
             CurrentLocation = CurrentWorld.LocationAt(0, 0)!;
         }
