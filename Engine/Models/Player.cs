@@ -4,13 +4,14 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 
 namespace Engine.Models
 {
-    public class Player(string name, string characterClass) : BaseNotificationClass
+    public class Player : BaseNotificationClass
     {
-        private string _name = name;
-        private string _characterClass = characterClass;
+        private string _name;
+        private string _characterClass;
         private int _hitPoints = 100;
         private int _experiencePoints = 0;
         private int _level = 1;
@@ -31,5 +32,16 @@ namespace Engine.Models
         public int Level { get { return _level; } set { _level = value; OnPropertyChanged(nameof(Level)); } }
         public int Gold { get { return _gold; } set { _gold = value; OnPropertyChanged(nameof(Gold)); } }
 
+        public ObservableCollection<GameItem> Inventory { get; set; }
+
+        public Player(string name, string characterClass)
+        {
+            Inventory = new ObservableCollection<GameItem>();
+
+            this._name = name;
+            this._characterClass = characterClass;
+        }
+
     }
+
 }
