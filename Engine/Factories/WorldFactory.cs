@@ -43,6 +43,12 @@ namespace Engine.Factories
                 "You see a small hut, with plants drying from the roof.",
                 "/Engine;component/Images/Locations/HerbalistsHut.png"));
 
+            Quest? q1 = QuestFactory.GetQuestByID(1);
+            if (q1 != null)
+            {
+                newWorld.LocationAt(0, 1)?.QuestsAvailableHere.Add(q1);
+            }
+
             newWorld.AddLocation(new Location(0, 2, "Herbalist's garden",
                 "There are many plants here, with snakes hiding behind them.",
                 "/Engine;component/Images/Locations/HerbalistsGarden.png"));

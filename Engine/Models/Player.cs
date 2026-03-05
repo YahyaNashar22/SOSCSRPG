@@ -33,10 +33,12 @@ namespace Engine.Models
         public int Gold { get { return _gold; } set { _gold = value; OnPropertyChanged(nameof(Gold)); } }
 
         public ObservableCollection<GameItem> Inventory { get; set; }
+        public ObservableCollection<QuestStatus> Quests { get; set; }
 
         public Player(string name, string characterClass)
         {
             Inventory = new ObservableCollection<GameItem>();
+            Quests = new ObservableCollection<QuestStatus>();
 
             this._name = name;
             this._characterClass = characterClass;
