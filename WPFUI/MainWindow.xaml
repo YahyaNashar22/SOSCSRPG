@@ -103,6 +103,8 @@
                             Stretch="Uniform"
                            Source="{Binding CurrentLocation.ImageName}"/>
                     <TextBlock Grid.Row="2"
+                             TextWrapping="Wrap"
+                              TextAlignment="Center"
                                HorizontalAlignment="Center"
                                Text="{Binding CurrentLocation.Description}"/>
                 </Grid>
@@ -135,8 +137,8 @@
                                 Visibility="{Binding HasMonster, Converter={StaticResource BooleanToVisibility}}"
                                 HorizontalAlignment="Center"
                                 Orientation="Horizontal">
-                        <TextBlock>Current Hit Points</TextBlock>
-                        <TextBlock Text="{Binding CurrentMonster.HitPoints}"/>
+                        <TextBlock>Current Hit Points </TextBlock>
+                        <TextBlock Text="{Binding CurrentMonster.HitPoints}" Margin="6,0,0,0"/>
                     </StackPanel>
 
                 </Grid>
@@ -196,6 +198,33 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="255" />
             </Grid.ColumnDefinitions>
+
+            <!-- Combat Controls-->
+            <Grid Grid.Row="0" Grid.Column="0"
+                  Visibility="{Binding HasMonster, Converter={StaticResource BooleanToVisibility}}"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <ComboBox Grid.Row="0" Grid.Column="0"
+                          ItemsSource="{Binding CurrentPlayer.Weapons}"
+                          SelectedItem="{Binding CurrentWeapon}"
+                          DisplayMemberPath="Name"
+                          SelectedValuePath="ID"/>
+
+                <Button Grid.Row="0" Grid.Column="2"
+                        Content="Attack"
+                        Click="OnClick_AttackMonster" />
+
+            </Grid>
 
             <Grid Grid.Row="0" Grid.Column="1">
 
