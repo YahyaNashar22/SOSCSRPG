@@ -15,37 +15,37 @@ namespace Engine.Factories
 
             newWorld.AddLocation(new Location(-2, -1, "Farmer's Field",
                 "There are rows of corn growing here, with giant rats hiding between them.",
-                "/Engine;component/Images/Locations/FarmFields.png"));
+               "FarmFields.png"));
 
             newWorld.LocationAt(-2, -1)?.AddMonster(2, 100);
 
             newWorld.AddLocation(new Location(-1, -1, "Farmer's House",
                 "This is the house of your neighbor, Farmer Ted.",
-                "/Engine;component/Images/Locations/Farmhouse.png"));
+                "Farmhouse.png"));
 
-            newWorld.AddLocation(new Location(0, -1, "Home", "This is your house", "/Engine;component/Images/Locations/Home.png"));
+            newWorld.AddLocation(new Location(0, -1, "Home", "This is your house", "Home.png"));
 
             newWorld.AddLocation(new Location(-1, 0, "Trading Shop",
                 "The shop of Susan, the trader.",
-                "/Engine;component/Images/Locations/Trader.png"));
+                "Trader.png"));
 
             newWorld.AddLocation(new Location(0, 0, "Town square",
                 "You see a fountain here.",
-                "/Engine;component/Images/Locations/TownSquare.png"));
+                "TownSquare.png"));
 
             newWorld.AddLocation(new Location(1, 0, "Town Gate",
                 "There is a gate here, protecting the town from giant spiders.",
-                "/Engine;component/Images/Locations/TownGate.png"));
+                "TownGate.png"));
 
             newWorld.AddLocation(new Location(2, 0, "Spider Forest",
                 "The trees in this forest are covered with spider webs.",
-                "/Engine;component/Images/Locations/SpiderForest.png"));
+                "SpiderForest.png"));
 
             newWorld.LocationAt(2, 0)?.AddMonster(3, 100);
 
             newWorld.AddLocation(new Location(0, 1, "Herbalist's hut",
                 "You see a small hut, with plants drying from the roof.",
-                "/Engine;component/Images/Locations/HerbalistsHut.png"));
+                "HerbalistsHut.png"));
 
             Quest? q1 = QuestFactory.GetQuestByID(1);
             if (q1 != null)
@@ -55,7 +55,7 @@ namespace Engine.Factories
 
             newWorld.AddLocation(new Location(0, 2, "Herbalist's garden",
                 "There are many plants here, with snakes hiding behind them.",
-                "/Engine;component/Images/Locations/HerbalistsGarden.png"));
+                "HerbalistsGarden.png"));
 
             newWorld.LocationAt(0, 2)?.AddMonster(1, 100);
 

@@ -15,7 +15,7 @@ namespace Engine.Models
         public string Name { get; set; } = name;
 
         public string Description { get; set; } = description;
-        public string? ImageName { get; set; } = imageName;
+        public string? ImageName { get; set; } = $"/Engine;component/Images/Locations/{imageName}";
         public List<Quest> QuestsAvailableHere { get; set; } = new List<Quest>();
         public List<MonsterEncounter> MonstersHere { get; set; } = new List<MonsterEncounter>();
 
